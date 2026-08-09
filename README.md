@@ -101,9 +101,11 @@ A handful of details only you can confirm. Search-and-replace them across the
   named. If you want to rank locally, add your city and state to the page
   titles, the footer, and the `areaServed` field in the JSON-LD block at the
   top of `index.html` — and add your street address there too.
-- **Licensing.** The footer says "Licensed & insured specialty carrier."
-  If you have a USDOT or MC number, or a state mover licence number, put it
-  in the footer — it builds trust and some states require it in advertising.
+- **Licensing and insurance.** The site deliberately makes no claim about
+  either — there is nothing on any page saying the company is licensed or
+  insured. Once you have a USDOT or MC number, or a state mover licence,
+  adding it to the footer is worth doing: it builds trust, and some states
+  require the number to appear in advertising.
 - **The logo.** `assets/img/logo-mark.svg` is a vector rebuild of the PA
   monogram in the brand's navy and gold. If you have the original artwork
   from your designer, drop the file into `assets/img/` and point the `<img

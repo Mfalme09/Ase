@@ -123,7 +123,7 @@ A handful of details only you can confirm. Search-and-replace them across the
   top of `index.html` — and add your street address there too.
 - **Licensing and insurance.** The site deliberately makes no claim about
   either — there is nothing on any page saying the company is licensed or
-  insured. Once you have a USDOT or MC number, or a state mover licence,
+  insured. Once you have a USDOT or MC number, or a state mover license,
   adding it to the footer is worth doing: it builds trust, and some states
   require the number to appear in advertising.
 - **The logo.** `assets/img/logo-mark.svg` is a vector rebuild of the PA
@@ -139,16 +139,16 @@ A handful of details only you can confirm. Search-and-replace them across the
 
 - The header and footer are copied into each page rather than pulled from a
   template. If you change one, change all six files.
-- Colours, spacing and fonts are all defined as CSS custom properties at the
+- Colors, spacing and fonts are all defined as CSS custom properties at the
   top of `assets/css/styles.css`. Change them there once and the whole site
   follows.
 - The circuit-trace texture in the dark sections is a single inline SVG in the
   `.circuitry` rule — add that class to any section to get it.
 - The site works with JavaScript disabled; `main.js` only enhances.
 - Each page carries structured data in a `<script type="application/ld+json">`
-  block: company details and hours on the home page, a service catalogue on
+  block: company details and hours on the home page, a service catalog on
   the services page, the six questions and answers on the About page, and
   breadcrumbs throughout. This is what lets Google show the FAQ and the
   phone number directly in search results. If you edit an FAQ answer on the
   About page, edit the matching answer in its JSON block too — Google
-  penalises structured data that does not match what a visitor sees.
+  penalizes structured data that does not match what a visitor sees.

@@ -13,9 +13,10 @@ contact.html        Quote form and phone
 404.html            Not-found page
 assets/css/         styles.css   — the whole design system
 assets/js/          main.js      — mobile menu, scroll reveals, form handling
-assets/img/         logo-mark.svg, favicon.svg
+assets/img/         logo-mark.svg, favicon.svg + generated PNGs
+tools/              og-image.html, render-images.js — image generator
 CNAME               www.assettrans.com  (used by GitHub Pages)
-robots.txt          sitemap.xml
+site.webmanifest    robots.txt   sitemap.xml
 ```
 
 The phone number **1-888-751-9924** appears in the header, the hero, every
@@ -67,6 +68,25 @@ you.
 If you bought hosting from GoDaddy, no DNS changes are needed. Upload the
 contents of this folder (not the folder itself) to `public_html` via cPanel
 File Manager or FTP, keeping the `assets/` directory structure intact.
+
+## Regenerating the images
+
+Everything on the page is SVG or CSS, but a few things have to be real
+raster images: the card that appears when someone shares a link on
+Facebook, LinkedIn, iMessage or X, and the icon iOS uses when a visitor
+saves the site to their home screen. Those are checked into `assets/img/`
+already, so you only need this if you change the logo or the wording on
+the share card.
+
+```bash
+npm install playwright && npx playwright install chromium
+node tools/render-images.js
+```
+
+That regenerates `og-image.png` (1200x630), `apple-touch-icon.png`,
+`icon-192.png`, `icon-512.png` and `favicon-32.png`. The share card's
+layout lives in `tools/og-image.html` — open it in a browser to see
+exactly what gets captured.
 
 ## Making the quote form deliver email
 
@@ -125,3 +145,10 @@ A handful of details only you can confirm. Search-and-replace them across the
 - The circuit-trace texture in the dark sections is a single inline SVG in the
   `.circuitry` rule — add that class to any section to get it.
 - The site works with JavaScript disabled; `main.js` only enhances.
+- Each page carries structured data in a `<script type="application/ld+json">`
+  block: company details and hours on the home page, a service catalogue on
+  the services page, the six questions and answers on the About page, and
+  breadcrumbs throughout. This is what lets Google show the FAQ and the
+  phone number directly in search results. If you edit an FAQ answer on the
+  About page, edit the matching answer in its JSON block too — Google
+  penalises structured data that does not match what a visitor sees.

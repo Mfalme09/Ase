@@ -1,0 +1,15 @@
+{
+  "name": "Precision Asset Transportation",
+  "short_name": "Precision Asset",
+  "description": "White glove asset transportation for pianos, fine art, grandfather clocks, armoires, safes, valuables, estate sales, office moves and liquidations.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b2545",
+  "theme_color": "#0b2545",
+  "icons": [
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

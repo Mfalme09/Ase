@@ -79,7 +79,7 @@ li { margin-bottom: .45em; }
   color: var(--gold); margin: 0 0 14px; display: flex; align-items: center; gap: 12px;
 }
 .center .eyebrow { justify-content: center; }
-.eyebrow::before, .center .eyebrow::after {
+.eyebrow::before, .center .eyebrow::after, .mission .eyebrow::after {
   content: ""; width: 28px; height: 1px; background: var(--gold); opacity: .6;
 }
 .on-navy .eyebrow { color: var(--gold-light); }
@@ -287,6 +287,41 @@ li { margin-bottom: .45em; }
 }
 .split .visual img { width: 58%; opacity: .96; }
 
+/* Mission statement */
+.mission { max-width: 880px; margin-inline: auto; text-align: center; }
+.mission .monogram { width: 78px; margin: 0 auto 26px; }
+.mission-statement { margin: 0; border: 0; padding: 0; }
+.mission-statement p {
+  font-family: var(--font-serif); color: var(--ink);
+  font-size: clamp(1.06rem, 1.5vw, 1.22rem); line-height: 1.62;
+}
+.mission-statement p.pledge {
+  font-style: italic; color: var(--navy-800); font-weight: 400;
+  font-size: clamp(1.42rem, 3vw, 2.05rem); line-height: 1.3; letter-spacing: -.01em;
+  margin-bottom: .7em;
+}
+.mission-statement p:last-child { margin-bottom: 0; }
+.mission-rule {
+  width: 74px; height: 2px; margin: 26px auto;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+.seals { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 38px; }
+.seal {
+  display: flex; align-items: center; gap: 11px; background: var(--white);
+  border: 1px solid var(--gold); border-radius: 100px; padding: 12px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.seal svg { width: 22px; height: 22px; fill: none; stroke: var(--gold); stroke-width: 1.5; flex: none; }
+.seal span {
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--navy-800); white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .seals { gap: 10px; }
+  .seal { padding: 10px 18px; }
+  .seal span { font-size: .72rem; letter-spacing: .08em; }
+}
+
 /* Recreation of the brand card, used as the About page visual */
 .brand-card {
   position: relative; overflow: hidden; border-radius: 6px; text-align: center;
@@ -297,6 +332,7 @@ li { margin-bottom: .45em; }
 }
 .brand-card > * { position: relative; z-index: 2; }
 .brand-card img { width: 190px; margin: 0 auto 26px; }
+.section--ivory .card { background: var(--white); }
 .brand-card .card-name {
   font-family: var(--font-display); font-weight: 700; color: var(--gold-light);
   text-transform: uppercase; letter-spacing: .12em; font-size: 1.28rem; line-height: 1.3;

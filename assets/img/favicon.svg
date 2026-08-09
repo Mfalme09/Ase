@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="fav-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBD08A"/>
+      <stop offset="45%" stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#B08616"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="46" fill="#0B2545"/>
+  <g transform="translate(20,50) scale(0.84)" fill="url(#fav-gold)" stroke="url(#fav-gold)">
+    <path stroke="none" fill-rule="evenodd"
+      d="M18 16 H66 C88 16 100 30 100 50 C100 70 88 84 66 84 H48 V172 H18 Z
+         M48 38 H64 C73 38 78 43 78 50 C78 57 73 62 64 62 H48 Z"/>
+    <path d="M92 172 L140 26 L188 172" stroke-width="26" fill="none" stroke-linejoin="miter"/>
+    <path d="M109 120 L214 47" stroke-width="24" fill="none"/>
+    <polygon points="240,28 224,65 200,31" stroke="none"/>
+  </g>
+</svg>

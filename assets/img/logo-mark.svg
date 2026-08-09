@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 190" role="img" aria-label="Precision Asset Transportation monogram">
+  <title>Precision Asset Transportation</title>
+  <defs>
+    <linearGradient id="pat-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBD08A"/>
+      <stop offset="35%" stop-color="#C9A227"/>
+      <stop offset="64%" stop-color="#EFDCA2"/>
+      <stop offset="100%" stop-color="#B08616"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#pat-gold)" stroke="url(#pat-gold)">
+    <!-- P -->
+    <path stroke="none" fill-rule="evenodd"
+      d="M18 16 H66 C88 16 100 30 100 50 C100 70 88 84 66 84 H48 V172 H18 Z
+         M48 38 H64 C73 38 78 43 78 50 C78 57 73 62 64 62 H48 Z"/>
+    <!-- A, with the rising arrow doing the work of its crossbar -->
+    <path d="M92 172 L140 26 L188 172" stroke-width="26" fill="none" stroke-linejoin="miter"/>
+    <path d="M109 120 L214 47" stroke-width="24" fill="none"/>
+    <polygon points="240,28 224,65 200,31" stroke="none"/>
+  </g>
+</svg>

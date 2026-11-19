@@ -26,7 +26,7 @@ In `portfolio.html`, each project is a `<figure class="project">`. Replace the
 icon and "Photos coming soon" inside `.project__media` with an image, for example
 `<img src="assets/img/portfolio/deck-after.jpg" alt="Rebuilt deck with new railings">`.
 
-The phone number **1-888-751-9924** appears in the header, the hero, every
+The phone number **(305) 988-4847** appears in the header, the hero, every
 call-to-action band, the footer, and as a fixed tap-to-call bar on phones.
 
 ## Preview it locally

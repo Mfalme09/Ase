@@ -101,9 +101,9 @@
       }).then(function (res) {
         if (!res.ok) throw new Error("Request failed");
         form.reset();
-        say("Thank you — your request is in. We reply within one business day. Need us sooner? Call 1-888-751-9924.", true);
+        say("Thank you — your request is in. We reply within one business day. Need us sooner? Call (305) 988-4847.", true);
       }).catch(function () {
-        say("That did not go through. Please call us at 1-888-751-9924 and we will take the details by phone.", false);
+        say("That did not go through. Please call us at (305) 988-4847 and we will take the details by phone.", false);
       }).then(function () {
         if (button) { button.disabled = false; button.textContent = "Request My Estimate"; }
       });
@@ -117,7 +117,7 @@
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(lines.join("\n"));
     window.location.href = href;
-    say("Your email program is opening with these details. If nothing happens, call 1-888-751-9924 or email " + FALLBACK_EMAIL + ".", true);
+    say("Your email program is opening with these details. If nothing happens, call (305) 988-4847 or email " + FALLBACK_EMAIL + ".", true);
   });
 
   /* Pre-select the service when arriving from a "Get an estimate" link. */

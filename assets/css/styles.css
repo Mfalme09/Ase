@@ -649,7 +649,7 @@ a.contact-card__line:hover span { text-decoration: underline; }
   border-radius: 100px; padding: 6px 12px; white-space: nowrap;
 }
 .header-moving:hover { border-color: var(--gold-light); }
-@media (max-width: 1120px) { .header-moving { display: inline-block; } }
+@media (max-width: 860px) { .header-moving { display: inline-block; } }
 .contact-card__moving { grid-column: 1 / -1; justify-content: center; border-color: var(--copper); color: var(--copper-deep); }
 .contact-card__moving:hover { background: var(--copper); border-color: var(--copper); color: var(--white); }
 .moving-band { position: relative; overflow: hidden; background: radial-gradient(900px 420px at 85% 20%, rgba(184, 115, 51, .28), transparent 60%), var(--navy-900); color: var(--white); }
@@ -667,3 +667,8 @@ a.contact-card__line:hover span { text-decoration: underline; }
 .move-links a:hover { border-color: var(--gold-light); background: rgba(201, 138, 75, .1); }
 #specialty .detail:first-of-type { border-top: 1px solid var(--line); }
 @media (max-width: 400px) { .header-moving { padding: 5px 9px; font-size: .72rem; } }
+@media (max-width: 1460px) { .brand-name .brand-tag { display: none; } }
+@media (max-width: 1220px) { .header-cta .btn { display: none; } }
+@media (max-width: 1000px) { .header-phone span { display: none; } }
+.split > * { min-width: 0; }
+@media (max-width: 360px) { .about-stats span { font-size: .62rem; letter-spacing: .06em; } }

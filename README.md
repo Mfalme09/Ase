@@ -1,23 +1,30 @@
 # Precision Asset Transportation — www.assettrans.com
 
-A static marketing site for Precision Asset Transportation. No build step, no
+A static marketing site for Precision Asset Transportation: property management,
+renovation, and moving & relocation. No build step, no
 framework, no dependencies — plain HTML, one stylesheet and one small script,
 so it can be hosted anywhere and edited with any text editor.
 
 ```
-index.html          Home
-services.html       What we move, item by item
-specialties.html    Estate sales, office moves, liquidations
-about.html          Standard of care + FAQ
-contact.html        Quote form and phone
+index.html          Home — contact card up front, services, why us
+services.html       Property maintenance and renovation, trade by trade
+portfolio.html      Project gallery (placeholder tiles until photos are added)
+moving.html         Moving & relocation services
+about.html          Company story, process and values
+contact.html        Estimate form, phone and email
 404.html            Not-found page
+vercel.json         Redirects the old specialties page to moving.html
 assets/css/         styles.css   — the whole design system
-assets/js/          main.js      — mobile menu, scroll reveals, form handling
+assets/js/          main.js      — mobile menu, reveals, portfolio filter, form
 assets/img/         logo-mark.svg, favicon.svg + generated PNGs
 tools/              og-image.html, render-images.js — image generator
-CNAME               www.assettrans.com  (used by GitHub Pages)
-site.webmanifest    robots.txt   sitemap.xml
 ```
+
+### Adding portfolio photos
+
+In `portfolio.html`, each project is a `<figure class="project">`. Replace the
+icon and "Photos coming soon" inside `.project__media` with an image, for example
+`<img src="assets/img/portfolio/deck-after.jpg" alt="Rebuilt deck with new railings">`.
 
 The phone number **1-888-751-9924** appears in the header, the hero, every
 call-to-action band, the footer, and as a fixed tap-to-call bar on phones.

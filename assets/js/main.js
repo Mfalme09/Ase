@@ -41,13 +41,32 @@
     });
   }
 
+  /* ------------------------------------------------------ portfolio filter */
+  var filters = document.querySelectorAll(".filter");
+  if (filters.length) {
+    filters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var f = btn.getAttribute("data-filter");
+        filters.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        document.querySelectorAll(".project").forEach(function (p) {
+          p.hidden = !(f === "all" || p.getAttribute("data-cat") === f);
+          p.classList.add("is-in");
+        });
+      });
+    });
+  }
+
   /* ------------------------------------------------------------ quote form
      By default the form has no server behind it, so we hand the enquiry to
      the visitor's mail client. To switch to a hosted form service, set
      FORM_ENDPOINT below to the URL you are given (Formspree, FormSubmit,
      Netlify Forms, etc.) and the form will POST there instead.           */
   var FORM_ENDPOINT = "";
-  var FALLBACK_EMAIL = "info@assettrans.com";
+  var FALLBACK_EMAIL = "monroe@aseherbs.com";
 
   var form = document.getElementById("quote-form");
   if (!form) return;
@@ -86,20 +105,31 @@
       }).catch(function () {
         say("That did not go through. Please call us at 1-888-751-9924 and we will take the details by phone.", false);
       }).then(function () {
-        if (button) { button.disabled = false; button.textContent = "Request My Quote"; }
+        if (button) { button.disabled = false; button.textContent = "Request My Estimate"; }
       });
       return;
     }
 
     /* No endpoint configured: open the visitor's mail client, pre-filled. */
     e.preventDefault();
-    var subject = "Quote request — " + (data.get("service") || "Asset transportation");
+    var subject = "Quote request — " + (data.get("service") || "Property services");
     var href = "mailto:" + FALLBACK_EMAIL +
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(lines.join("\n"));
     window.location.href = href;
     say("Your email program is opening with these details. If nothing happens, call 1-888-751-9924 or email " + FALLBACK_EMAIL + ".", true);
   });
+
+  /* Pre-select the service when arriving from a "Get an estimate" link. */
+  var wanted = new URLSearchParams(location.search).get("service");
+  var sel = form.querySelector("#service");
+  if (wanted && sel) {
+    var w = wanted.toLowerCase();
+    for (var i = 0; i < sel.options.length; i++) {
+      var o = sel.options[i].text.toLowerCase();
+      if (o && (o.indexOf(w.slice(0, 6)) === 0 || (w.indexOf("moving") === 0 && o.indexOf("moving") === 0))) { sel.selectedIndex = i; break; }
+    }
+  }
 
   /* Set a sensible default for the "preferred date" minimum. */
   var dateField = form.querySelector('input[type="date"]');

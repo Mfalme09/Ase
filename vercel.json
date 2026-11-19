@@ -1,0 +1,15 @@
+{
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/specialties.html",
+      "destination": "/moving.html",
+      "permanent": true
+    },
+    {
+      "source": "/specialties",
+      "destination": "/moving.html",
+      "permanent": true
+    }
+  ]
+}
